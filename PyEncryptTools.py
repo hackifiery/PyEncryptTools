@@ -1,3 +1,11 @@
+import random
+import string
+
+def random_key_generator(length):
+   """Generates a random key of a given length."""
+   letters_and_digits = string.ascii_letters + string.digits
+   return ''.join(random.choice(letters_and_digits) for _ in range(length))
+   
 def caesar_cipher(text, shift, mode='e'):
    result = ""
    if mode == 'e':
